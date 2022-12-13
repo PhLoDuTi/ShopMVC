@@ -1,0 +1,72 @@
+﻿@model ShopMVC.Models.OrderSell
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>OrderSell</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.orderDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.orderDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.agentID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.agentID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.paymentMethod)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.paymentMethod)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.orderItem)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.orderItem)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.orderItemAmount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.orderItemAmount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.orderPrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.orderPrice)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

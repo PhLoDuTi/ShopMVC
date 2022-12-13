@@ -1,0 +1,66 @@
+﻿@model ShopMVC.Models.OrderSell
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>OrderSell</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.orderDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.orderDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.agentID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.agentID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.paymentMethod)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.paymentMethod)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.orderItem)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.orderItem)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.orderItemAmount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.orderItemAmount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.orderPrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.orderPrice)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.orderID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
